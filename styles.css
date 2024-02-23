@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRaspberry: hsl(332, 51%, 32%);
+  --Rosewhite: hsl(330, 100%, 98%);
+  --EggShell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  font: 400 93.5%/176% 'Outfit', 'sans-serif';
+  background-color: var(--EggShell);
+  color: var(--WengeBrown);
+}
+
+.width_wrapper {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: 0 1.8rem;
+}
+
+.fixed_list,
+.fixed_list li {
+  padding-left: 1.25rem;
+}
+
+.main_container {
+  margin: 2rem 0;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+
+.content {
+  padding: 0 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.content>* {
+  display: grid;
+  gap: .5rem;
+}
+
+.img_container {
+  padding: 2rem;
+}
+
+.img_container img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.intro h1 {
+  font-family: 'Young Serif', 'sans-serif';
+  color: var(--DarkCharcoal);
+}
+
+.intro p {
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.prep_time {
+  background-color: var(--Rosewhite);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.prep_time h2,
+.prep_time li::marker {
+  color: var(--DarkRaspberry);
+  font-weight: 600;
+}
+
+.heading_titles {
+  font-family: 'Young Serif', 'sans-serif';
+  color: var(--Nutmeg);
+  margin: .5rem 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.ingredients {
+  border-bottom: 1px solid var(--LightGrey);
+  padding-bottom: 2rem;
+}
+
+.ingredients li::marker {
+  color: var(--Nutmeg);
+}
+
+.ingredients li span {
+  font-weight: 500;
+}
+
+.instructions {
+  border-bottom: 1px solid var(--LightGrey);
+  padding-bottom: 2rem;
+  text-align: justify;
+}
+
+/* focus on the li items marker (1,2,3,4...) */
+.instructions li::marker {
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
+
+.instructions .instruction_titles {
+  font-weight: 700;
+}
+
+.nutrition {
+  display: grid;
+  padding-bottom: 1rem;
+}
+
+.nutrition table {
+  border-collapse: collapse;
+}
+
+.nutrition tr>* {
+  padding: 1rem 0 1rem 1.8rem;
+}
+
+.nutrition tr:not(:last-child)>* {
+  border-bottom: 1px solid var(--LightGrey);
+}
+
+.nutrition th {
+  text-align: left;
+}
+
+.nutrition td {
+  color: var(--Nutmeg);
+  font-weight: 600;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  font-weight: 800;
+}
+
+@media (max-width: 35rem) {
+  .main_container {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .width_wrapper {
+    padding: 0;
+  }
+
+  .img_container {
+    padding: 0;
+  }
+
+  .img_container img {
+    border-radius: 0;
+  }
+}
